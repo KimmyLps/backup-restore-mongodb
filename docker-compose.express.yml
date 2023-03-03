@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  example-mongo-express:
+    image: mongo-express
+    container_name: example-mongo-express
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_URL=mongodb://root:123456@example-mongodb:27017/?authSource=admin
+      - ME_CONFIG_BASICAUTH_USERNAME=root
+      - ME_CONFIG_BASICAUTH_PASSWORD=12345
+    restart: always
+    ports:
+      - "8081:8081"
+    networks:
+      - backup-restore-mongodb-network
+
+networks:
+  backup-restore-mongodb-network:
+    name: backup-restore-mongodb-network
+    external: true

@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-dotnettools.csharp",
+        "humao.rest-client",
+        "cweijan.vscode-mysql-client2",
+        "davidanson.vscode-markdownlint",
+        "kreativ-software.csharpextensions",
+        "eamodio.gitlens",
+        "TabNine.tabnine-vscode",
+        "EthanSK.restore-terminals",
+        "k--kato.docomment",
+    ]
+}

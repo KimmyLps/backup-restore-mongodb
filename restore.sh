@@ -1,0 +1,1 @@
+docker exec -i example-mongodb /usr/bin/mongorestore --uri="mongodb://root:123456@example-mongodb:27017/?authSource=admin" --drop --archive=/backup-mongo/backup-mongo.gz --gzip

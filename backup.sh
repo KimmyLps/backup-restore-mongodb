@@ -1,0 +1,1 @@
+docker exec -i example-mongodb /usr/bin/mongodump --uri="mongodb://root:123456@example-mongodb:27017" --archive=/backup-mongo/backup-mongo.gz --gzip

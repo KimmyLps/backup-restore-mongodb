@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backup-restore-mongodb-devcon:
+    image: mcr.microsoft.com/devcontainers/dotnet:0-6.0-bullseye
+    container_name: backup-restore-mongodb-devcon
+
+    volumes:
+      - ..:/workspaces/backup-restore-mongodb:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    command: sleep infinity
+
+    networks:
+      - backup-restore-mongodb-network
+
+networks:
+  backup-restore-mongodb-network:
+    external: true
+    name: backup-restore-mongodb-network
